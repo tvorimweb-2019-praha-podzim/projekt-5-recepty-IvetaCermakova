@@ -8,11 +8,20 @@ html { box-sizing: border-box; }
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-size: 14px;
 }
 
 h2 {
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+.recept-nazev1{
+    margin:0;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 28px;
 }
 
 .paticka {
@@ -25,18 +34,113 @@ h2 {
     color: silver;
 }
 
-/* -------------------------------------------------- */
 
-/*
-pouzivame mobile first pristup
-tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
-s pribyvajici sirkou pridavame media query pro...
-tablety:
-@media (min-width: 480px) {
+.hlavni_recept,
+.recept_recept2,
+.recept_recept3,
+.recept_recept4,
+.recept_recept5{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 200px;
+    padding: 10px;
+    position: relative;
 }
-notebook/pc:
-@media (min-width: 860px) {
-}
-*/
 
-/* tvoje styly sem */
+.hlavni_recept{
+    background-image: url("images/burger.jpg");
+}
+
+.recept_recept2{
+    background-image: url("images/sushi.jpg");
+}
+
+.recept_recept3{
+    background-image: url("images/rajcata.jpg");
+}
+
+.recept_recept4{
+    background-image: url("images/kure.jpg");
+}
+
+.recept_recept5{
+    background-image: url("images/grilovani.jpg");
+}
+
+.recept-meta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recept-nazev1,
+.recept-nazev{
+    position: absolute;
+    bottom: 10px;    
+}
+
+/* tablet */
+@media (min-width: 480px){
+    .recept-nazev1{
+        font-size: 36px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+
+    .hlavni_recept{
+        padding: 20px;
+        min-height: 250px;
+        width: 100%;
+        background-size: auto;
+    }
+
+    .recept_recept2,
+    .recept_recept3,
+    .recept_recept4,
+    .recept_recept5{
+        padding: 20px;
+        min-height: 150px;
+    }     
+
+    .sloupec{
+        width: 50%;
+        float: left;
+    }
+}
+
+/* notebook/pc */
+@media (min-width: 860px){
+    .recept-nazev1{
+        font-size: 48px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    .hlavni_recept{
+        padding: 20px;    
+        background-size: auto;
+        background-position: relative;
+        width: 33.33%;
+    }
+
+    .recept_recept2,
+    .recept_recept3,
+    .recept_recept4,
+    .recept_recept5{
+        min-height: 200px;
+        padding: 20px;
+    }     
+
+    .sloupec{
+        width: 33.33%;
+    }
+
+    .doporucujeme{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
